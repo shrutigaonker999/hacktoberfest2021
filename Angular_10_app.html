@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="MYApp" ng-controller="MyCt">
+		<button ng-click="ShowFunc()"> Click here</button>
+		<div ng-show="showme">
+			<table border=1 bgcolor="lightblue">
+				<tr>
+					<th>Name</th>
+					<th>Surname</th>
+				</tr>
+				<tr>
+					<td>Garvit</td>
+					<td>Bhateja</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script>
+		var app=angular.module('MYApp',[]);
+		app.controller('MyCt',function($scope){
+			$scope.showme=false;
+			$scope.ShowFunc=function(){
+				$scope.showme=!$scope.showme;
+			}
+		});
+	</script>
+	<p>Click Button to show/hide the details</p>
+</body>
+</html>

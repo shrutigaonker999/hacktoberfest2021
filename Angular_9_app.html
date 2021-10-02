@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="MyApp">
+	<div align="center"><h1>Counter WEBAPP</h1></div>
+	<div ng-controller="myct">
+		<button ng-click="count=count+1">Increase Count</button> 
+		<button ng-click="count=0">Reset Counter</button>
+		<hr>
+		<p>Total Counter value = {{count}}</p>
+	</div>
+	<script>
+		var app=angular.module("MyApp",[]);
+		app.controller("myct",function($scope){
+			$scope.count=0;
+
+		});
+	</script>
+
+</body>
+</html>

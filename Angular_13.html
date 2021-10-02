@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+</head>
+<body ng-app="">
+	<p>Try writin in the input field:</p>
+	<form name="myForm">
+		<input name="myInput" ng-model="myIN" required>
+		<input type="email" name="email" ng-model="emailmodel" required>
+	</form>
+	
+	
+	<p>The input's valid state is:</p>
+	<h1>{{myForm.myInput.$valid}}</h1>
+	<p>The Value of form input is : </p>
+	{{myIN}}<br>
+	<span style="color:red" ng-show="myForm.email.$invalid"><span ng-show="myForm.email.$error.required">Email is required</span>
+	<span ng-show="myForm.email.$error.email">Invalid Email address</span>
+	</span>
+	<span style="color:green" ng-show="myForm.email.$valid">{{emailmodel}}</span>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="MyCt">
+		Enter Message : <input type="text" ng-model="message">
+		<button ng-click="showMsg(message)"> Show Message</button>
+	</div>
+	<script>
+		var app=angular.module("myApp",[]);
+		app.controller("MyCt",function($scope){
+			$scope.message="Hello World!";
+			$scope.showMsg=function(msg){
+				alert(msg);
+			};
+
+		});
+	</script>
+
+</body>
+</html>
