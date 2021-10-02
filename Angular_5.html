@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body>
+	<div ng-app="" ng-init="quantity=5;cost=3;names=['arun','garvit','vanshika'];Cars=[{name:'WagonR',company:'Maruti Suzuki'},{name:'City',company:'Honda'},{name:'EcoSport',company:'Ford'}]">
+		<p>Total cost is : {{quantity*cost}}</p>
+		<p>Total cost is : <span ng-bind="quantity*cost"></span>
+		</p>
+		<p>Names in list format are as follows: 
+			<ul>
+				<li ng-repeat="x in names">{{x}}</li>
+			</ul>
+		</p>
+		<p>
+			Car names are as follows: 
+			<ul>
+				<li ng-repeat="x in Cars">
+					{{x.name+" , "+x.company}}
+					
+				</li>
+					
+			</ul>
+		</p>
+
+	</div>
+</body>
+</html>
