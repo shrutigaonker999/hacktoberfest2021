@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+</head>
+<body ng-app="MyApp">
+	<p><a href="#/!">Main</a></p>
+	<a href="#!red">Red</a>
+	<a href="#!yellow">Yellow</a>
+	<a href="#!green">Green</a>
+	<div ng-view></div>
+	<script>
+		var app=angular.module("MyApp",["ngRoute"]);
+		app.config(function($routeProvider)
+		{
+			$routeProvider
+			.when("/",{templateUrl:"javascript_1.html"})
+			.when("/red",{templateUrl:"javascript_2.html"})
+			.when("/yellow",{templateUrl:"javascript_3.html"})
+			.when("/green",{templateUrl:"javascript_1.html"});
+		});
+	</script>
+	<p> Click on the links to navigate</p>
+
+</body>
+</html>
